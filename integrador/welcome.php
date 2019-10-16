@@ -1,0 +1,1 @@
+<meta http-equiv="refresh" content="4 ;url=painel.php"> <!-- Vai para outra tela apos 3 segundos--> 
