@@ -34,35 +34,25 @@ include('conexao.php');
             </ul>
         </div>
             
-        <!-- Page content -->
+
         <div id="page-content-wrapper">
             <!-- Keep all page content within the page-content inset div! -->
             <div class="page-content inset">
                 <div class="row">
-                <div class="col-md-12">
-                <p class="well lead">Cadastro de Cliente</p>
-                <div class="container">
-                    <div class="row"> <!-- div da esquerda -->
-                    <h2>Olá, <?php echo $_SESSION['usuario'];?></h2>
-                        <h2><a href="logout.php">Sair</a></h2>
-                    </div>
-                        
- 
+                    <div class="col-md-12">
+                        <p class="well lead">Seja bem vindo ao ambiente de aprendizagem OnStudyOff</p>
+                        <div class="container">
+                            <div class="row"> <!-- div da esquerda -->
+                                <h2>Olá, <?php $_SESSION['usuario']; ?> </h2>
+                                <h2><a href="logout.php">Sair</a></h2>
+                            </div>
                         </div> <!-- fim div da direita -->
                     </div> <!-- fim div da esquerda -->
                 </div>
-
-                </div>
-            </div>
             </div>
         </div>
         
-    </div>
 
-
-
-
-    
     <script src="js/nav.js">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
