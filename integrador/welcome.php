@@ -5,8 +5,6 @@ include('conexao.php');
 ?>
 
 
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -28,7 +26,7 @@ include('conexao.php');
         .titulo {
             margin-top: 40px;
             text-align: center;
-            color: blue;
+            color: red;
         }
         .logo{
             text-align: center;
