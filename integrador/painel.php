@@ -44,6 +44,7 @@ include('conexao.php');
                         <div class="container">
                             <div class="row"> <!-- div da esquerda -->
                                 <h2>Olá, <?php $_SESSION['usuario']; ?> </h2>
+                                <h2>Login, <?php $_SESSION['usuario']; ?> </h2>
                                 <h2><a href="logout.php">Sair</a></h2>
                             </div>
                         </div> <!-- fim div da direita -->

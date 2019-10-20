@@ -40,7 +40,7 @@ include('conexao.php');
 
 <body>
     <div class="container">
-        <h1 class="titulo">Bem vindo, <?php echo $_SESSION ['usuario']; ?></h1>
+        <h1 class="titulo">Bem vindo, <?php echo $_SESSION ['nome']; ?></h1>
         <h2 class="titulo">Aproveite a cada momento!</h2>
 
 
