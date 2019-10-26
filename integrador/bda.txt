@@ -11,7 +11,7 @@ INSERT INTO tb_usuario (usuario, senha) VALUES ('111','admin');
 INSERT INTO tb_usuario (usuario, senha) VALUES ('123','admin');
 select * from tb_usuario;
 
-select us.usuario, al.nome from tb_usuario us inner join tb_aluno al on us.id_usuario=al.ra where usuario = '12345';
+
 create table tb_aluno(
 	ra int auto_increment primary key,
     nome varchar(100) not null,
@@ -26,8 +26,8 @@ create table tb_aluno(
     constraint fk_ct_pk_ra foreign key (id_contato) references tb_contato(id_contato),
 	constraint fk_curso_pk_ra foreign key (id_curso) references tb_curso(id_curso)
 );
-INSERT INTO tb_aluno (nome, cpf, dt_nasc, id_usuario, id_end, id_contato) VALUES ('Carioca','55555555', '11/12/2000', 2);
-INSERT INTO tb_aluno (nome, cpf, dt_nasc, id_usuario, id_end, id_contato, id_curso) VALUES ('Carioca','5555555', '11/12/1998', 3, 1, 1, 1);
+
+INSERT INTO tb_aluno (nome, cpf, dt_nasc, id_usuario, id_end, id_contato, id_curso) VALUES ('Leandro','4444444', '11/12/2000', 2, 2, 2, 2);
 select * from tb_aluno;
 
     
@@ -42,7 +42,7 @@ create table tb_endereco(
     estado varchar(50)
 );
 INSERT INTO tb_endereco (logradouro, numero, complemento, bairro, cep, cidade, estado) 
-VALUES ('Rua Jose',666, 'apt 23', 'Alphaville', '0812126', 'S√£o Paulo', 'SP');
+VALUES ('Rua Joao',666, 'apt 100', 'Alphaville', '1212341', 'S„o Pedro', 'SP');
 select * from tb_endereco;
 
 
@@ -52,16 +52,19 @@ create table tb_contato(
     celular varchar(30)
 );
 INSERT INTO tb_contato (email, celular) 
-VALUES ('luiz@bol.com', '(11)98582825');
+VALUES ('leandro@bol.com', '(11)40028922');
 
 
 create table tb_curso(
 	id_curso int auto_increment,
     nome varchar(70) not null,
     descricao varchar(200),
-    id_nota int not null,
     PRIMARY KEY(id_curso)
 );
+INSERT INTO tb_curso(nome, descricao) 
+VALUES('Inform·tica', 'Nossos cursos s„o personalizados de acordo com seus objetivos e nÌveis.');
+select * from tb_curso;
+
 ALTER TABLE tb_curso ADD id_nota int not null;
 ALTER TABLE tb_curso
 ADD CONSTRAINT fk_nota_pk_curso
@@ -71,17 +74,25 @@ INSERT INTO tb_curso(nome, descricao, id_nota)
 VALUES('Inform√°tica', 'Manuten√ß√£o desktops', 1);
 select * from tb_curso;
 
-create table tb_nota(
-	id_nota int auto_increment,
-    bimestre_1 decimal (5,2), 
-    bimestre_2 decimal (5,2),
-    bimestre_3 decimal (5,2),
-    bimestre_4 decimal (5,2),
-    PRIMARY KEY(id_nota)
+
+
+create table tb_notas(
+	id_notas int auto_increment,
+    nota decimal (5,2), 
+    semestre varchar (10),
+    ano varchar (10),
+    id_curso int not null,
+    ra int not null,
+    PRIMARY KEY(id_notas),
+	constraint fk_curso_pk_notas foreign key (id_curso) references tb_curso(id_curso),
+	constraint fk_aluno_pk_notas foreign key (ra) references tb_aluno(ra)
 );
-INSERT INTO tb_nota(bimestre_1, bimestre_2, bimestre_3, bimestre_4) 
-VALUES(10, 9.0, 8.0, 7.0);
-select * from tb_nota;
+
+
+INSERT INTO tb_notas(nota, semestre, ano, id_curso, ra) 
+VALUES(10.0, '2∞', '2019', 1, 1);
+select * from tb_notas;
+
 
 
 
@@ -114,3 +125,4 @@ INSERT INTO `events` (`id`, `title`, `color`, `start`, `end`) VALUES
 (9, 'Tutorial', '#228B22', '2019-09-12 00:00:00', '2019-09-13 00:00:00'),
 (10, 'Tutorial 2', '#FF4500', '2019-09-13 15:10:10', '2019-09-13 17:15:15');
 COMMIT;
+
