@@ -1,7 +1,11 @@
 <?php
 session_start();
 require_once 'auth/autenticacao.php';
-include('conexao.php');
+require_once 'Model/AlunoModel.php';
+
+
+$alunos = new AlunoModel();
+$aluno = $alunos->getAlunoByRA($_SESSION['ra']);
 
 ?>
 
@@ -9,25 +13,17 @@ include('conexao.php');
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
     <title>Home - OnStudyOff</title>
-
-    <!-- links -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
-
-    <!-- using local links -->
-    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"> -->
-
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/sidebar-themes.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
@@ -44,12 +40,15 @@ include('conexao.php');
                 <!-- sidebar-header  -->
                 <div class="sidebar-item sidebar-header d-flex flex-nowrap">
                     <div class="user-info">
-                        <span class="user-name">Jhon
-                            <strong>Smith</strong>
+                        <span class="user-name">
+                            <?= $aluno->nome ?>
+                        </span>
+                        <span class="user-role">
+                            <strong>RA: </strong><?= $aluno->ra ?>
                         </span>
                         <span class="user-status">
                             <i class="fa fa-circle"></i>
-                            <span>Off-line</span>
+                            <span>On-line</span>
                         </span>
                     </div>
                 </div>
@@ -256,14 +255,6 @@ include('conexao.php');
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
     </script>
     <script src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-
-    <!-- using local scripts -->
-    <!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script> -->
-
-
     <script src="js/main.js"></script>
 </body>
 

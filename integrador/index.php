@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (isset($_SESSION['usuario']) && isset($_SESSION['nome'])) {
+    header('Location: painel.php');
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
