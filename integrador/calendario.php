@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once 'auth/autenticacao.php';
 include('conexao.php');
 
 ?>
