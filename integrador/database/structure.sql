@@ -1,18 +1,45 @@
-create database db_ead;
-use db_ead;
+DROP DATABASE IF EXISTS `db_ead`;
+CREATE DATABASE db_ead;
+USE db_ead;
 
+DROP TABLE IF EXISTS `tb_usuario`;
 CREATE TABLE tb_usuario(
   id_usuario INT NOT NULL AUTO_INCREMENT,
   usuario VARCHAR(200) NOT NULL,
   senha VARCHAR(32) NOT NULL,
-  PRIMARY KEY (id_usuario));
-  
-INSERT INTO tb_usuario (usuario, senha) VALUES ('111','admin');
-INSERT INTO tb_usuario (usuario, senha) VALUES ('123','admin');
-select * from tb_usuario;
+  PRIMARY KEY (id_usuario)
+);
 
-select us.usuario, al.nome from tb_usuario us inner join tb_aluno al on us.id_usuario=al.ra where usuario = '12345';
-create table tb_aluno(
+DROP TABLE IF EXISTS `tb_endereco`;    
+CREATE TABLE tb_endereco(
+	id_end int auto_increment primary key,
+    logradouro varchar(40),
+    numero int,
+    complemento varchar(40),
+    bairro varchar(50),
+    cep varchar(15),
+    cidade varchar(50),
+    estado varchar(50)
+);
+
+DROP TABLE IF EXISTS `tb_contato`;
+CREATE TABLE tb_contato(
+	id_contato int auto_increment primary key,
+    email varchar(50),
+    celular varchar(30)
+);
+
+DROP TABLE IF EXISTS `tb_curso`;
+CREATE TABLE tb_curso(
+	id_curso int auto_increment,
+    nome varchar(70) not null,
+    descricao varchar(200),
+    id_nota int not null,
+    PRIMARY KEY(id_curso)
+);
+
+DROP TABLE IF EXISTS `tb_aluno`;
+CREATE TABLE tb_aluno(
 	ra int auto_increment primary key,
     nome varchar(100) not null,
     cpf varchar(15) not null,
@@ -26,52 +53,9 @@ create table tb_aluno(
     constraint fk_ct_pk_ra foreign key (id_contato) references tb_contato(id_contato),
 	constraint fk_curso_pk_ra foreign key (id_curso) references tb_curso(id_curso)
 );
-INSERT INTO tb_aluno (nome, cpf, dt_nasc, id_usuario, id_end, id_contato) VALUES ('Carioca','55555555', '11/12/2000', 2);
-INSERT INTO tb_aluno (nome, cpf, dt_nasc, id_usuario, id_end, id_contato, id_curso) VALUES ('Carioca','5555555', '11/12/1998', 3, 1, 1, 1);
-select * from tb_aluno;
 
-    
-create table tb_endereco(
-	id_end int auto_increment primary key,
-    logradouro varchar(40),
-    numero int,
-    complemento varchar(40),
-    bairro varchar(50),
-    cep varchar(15),
-    cidade varchar(50),
-    estado varchar(50)
-);
-INSERT INTO tb_endereco (logradouro, numero, complemento, bairro, cep, cidade, estado) 
-VALUES ('Rua Jose',666, 'apt 23', 'Alphaville', '0812126', 'São Paulo', 'SP');
-select * from tb_endereco;
-
-
-create table tb_contato(
-	id_contato int auto_increment primary key,
-    email varchar(50),
-    celular varchar(30)
-);
-INSERT INTO tb_contato (email, celular) 
-VALUES ('luiz@bol.com', '(11)98582825');
-
-
-create table tb_curso(
-	id_curso int auto_increment,
-    nome varchar(70) not null,
-    descricao varchar(200),
-    id_nota int not null,
-    PRIMARY KEY(id_curso)
-);
-ALTER TABLE tb_curso ADD id_nota int not null;
-ALTER TABLE tb_curso
-ADD CONSTRAINT fk_nota_pk_curso
-FOREIGN KEY (id_nota) REFERENCES tb_curso(id_nota);
-
-INSERT INTO tb_curso(nome, descricao, id_nota) 
-VALUES('Informática', 'Manutenção desktops', 1);
-select * from tb_curso;
-
-create table tb_nota(
+DROP TABLE IF EXISTS `tb_nota`;
+CREATE TABLE tb_nota(
 	id_nota int auto_increment,
     bimestre_1 decimal (5,2), 
     bimestre_2 decimal (5,2),
@@ -79,11 +63,6 @@ create table tb_nota(
     bimestre_4 decimal (5,2),
     PRIMARY KEY(id_nota)
 );
-INSERT INTO tb_nota(bimestre_1, bimestre_2, bimestre_3, bimestre_4) 
-VALUES(10, 9.0, 8.0, 7.0);
-select * from tb_nota;
-
-
 
 
 -- Estrutura da tabela `events`
@@ -97,7 +76,6 @@ CREATE TABLE IF NOT EXISTS `events` (
   `end` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
-select * from events;
 --
 -- Extraindo dados da tabela `events`
 --
