@@ -26,6 +26,7 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
     <link rel="stylesheet" href="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/sidebar-themes.css">
+
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 </head>
 
@@ -184,65 +185,20 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
                     <div class="form-group col-md-12">
                         
                     </div>
-                    <div class="form-group col-md-12">
-                        <iframe
-                            src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=star&count=true&size=small"
-                            frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
-                        <iframe
-                            src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=fork&count=true&size=small"
-                            frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
-                    </div>
-
-
-
 
                     <div class="form-group col-md-12">
-                        <a id="toggle-sidebar" class="btn btn-secondary rounded-0" href="#">
-                            <span>Toggle Sidebar</span>
-                        </a>
-                        <a id="pin-sidebar" class="btn btn-outline-secondary rounded-0" href="#">
-                            <span>Pin Sidebar</span>
+                        <!--Toggle-sidebar-->
+                        <!--<a id="toggle-sidebar" class="btn btn-secondary rounded-0" href="#">
+                            <span class="fas fa-arrow-circle-left"></span>
+                        </a>-->
+                        <a id="pin-sidebar" style="margin-top: -80px; margin-left: -20px;" class="btn btn-outline-secondary rounded-0" href="#">
+                            <span class="fas fa-arrows-alt-h"></span>
                         </a>
 
                     </div>
                 </div>
                 <hr>
-                
-                
-
-
-
-
-                <!--NAO MEXER-->
-                <hr>
-                <div class="row ">
-                    <div class="form-group col-md-12">
-                        <small>Made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by <span
-                                class="text-secondary font-weight-bold">Mohamed
-                                Azouaoui</span></small>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <a href="https://github.com/azouaoui-med" target="_blank"
-                            class="btn btn-sm bg-secondary shadow-sm rounded-0 text-light mr-3 mb-3">
-                            <i class="fab fa-github" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://twitter.com/azouaoui_med" target="_blank"
-                            class="btn btn-sm bg-secondary shadow-sm rounded-0 text-light mr-3 mb-3">
-                            <i class="fab fa-twitter" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.instagram.com/azouaoui_med/" target="_blank"
-                            class="btn btn-sm bg-secondary shadow-sm rounded-0 text-light mr-3 mb-3">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/mohamed-azouaoui/" target="_blank"
-                            class="btn btn-sm bg-secondary shadow-sm rounded-0 text-light mr-3 mb-3">
-                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
         </main>
-        <!-- page-content" -->
     </div>
     <!-- page-wrapper -->
 
