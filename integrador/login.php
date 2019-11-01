@@ -14,7 +14,7 @@ if(empty($_POST['usuario']) || empty($_POST['senha'])) {
 $usuario = mysqli_real_escape_string($conexao, $_POST['usuario']);
 $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 
-$query = "SELECT u.usuario, a.nome, a.ra FROM tb_usuario AS u INNER JOIN tb_aluno AS a ON a.id_usuario = u.id_usuario where usuario = '{$usuario}' and senha = '{$senha}'";
+$query = "SELECT u.usuario, a.nome, a.ra FROM tb_usuario AS u INNER JOIN tb_aluno AS a ON a.id = u.id where usuario = '{$usuario}' and senha = '{$senha}'";
 
 $result = mysqli_query($conexao, $query);
 
