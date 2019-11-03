@@ -75,25 +75,23 @@ CREATE TABLE tb_matricula(
 )engine InnoDB;
 
 
-DROP TABLE IF EXISTS `tb_questao`;
-CREATE TABLE tb_questao(
-	id int auto_increment PRIMARY KEY,
-    questao varchar(250),
-    id_curso int not null,
-    constraint fk_curso_pk_questao foreign key (id_curso) references tb_curso(id)
-)engine InnoDB;
+DROP TABLE IF EXISTS `db_ead`.`tb_questao` ;
 
-
-DROP TABLE IF EXISTS `tb_alternativa`;
-CREATE TABLE tb_alternativa(
-	id int auto_increment PRIMARY KEY,
-    at_1 varchar (255), 
-    at_2 varchar (255), 
-    at_3 varchar (255), 
-    at_4 varchar (255), 
-    at_correta varchar (10), 
-	id_questao int not null,	
-    constraint fk_questao_pk_at foreign key (id_questao) references tb_questao(id)
+CREATE TABLE IF NOT EXISTS `db_ead`.`tb_questao` (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  descricao TEXT NOT NULL,
+  id_curso INT(11) NOT NULL,
+  alternativa_a TEXT NOT NULL,
+  alternativa_b TEXT NOT NULL,
+  alternativa_c TEXT NOT NULL,
+  alternativa_d TEXT NOT NULL,
+  alternativa_e TEXT NOT NULL,
+  alternativa_correta ENUM('a', 'b', 'c', 'd', 'e') NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_curso_pk_questao` (`id_curso` ASC),
+  CONSTRAINT `fk_curso_pk_questao`
+    FOREIGN KEY (`id_curso`)
+    REFERENCES `db_ead`.`tb_curso` (`id`)
 )engine InnoDB;
 
 DROP TABLE IF EXISTS `tb_avaliacao`;
@@ -103,7 +101,9 @@ CREATE TABLE tb_avaliacao(
     nota_final decimal (5,2),
 	id_aluno int not null,
     id_curso int not null,
+    id_questao int not null,
 	constraint fk_aluno_pk_av foreign key (id_aluno) references tb_aluno(id),
+	constraint fk_questao_pk_av foreign key (id_questao) references tb_questao(id),
 	constraint fk_curso_pk_av foreign key (id_curso) references tb_curso(id)
 )engine InnoDB;
 

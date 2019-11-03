@@ -4,6 +4,8 @@ INSERT INTO tb_usuario (usuario, senha) VALUES ('antoniofelix','123123');
 
 INSERT INTO tb_endereco (logradouro, numero, complemento, bairro, cep, cidade, estado) 
 VALUES ('Rua Paulo',666, 'apt 23', 'Anguera', '0812126', 'Bahia', 'SP');
+INSERT INTO tb_endereco (logradouro, numero, complemento, bairro, cep, cidade, estado) 
+VALUES ('Rua Ângelo Pedroso',132, 'apt 12', 'Guaianases', '08460345', 'São Paulo', 'SP');
 
 INSERT INTO tb_contato (email, celular) 
 VALUES ('antonio@bol.com', '(11)959595');
@@ -31,12 +33,10 @@ VALUES('POO', 'Estrutura Básica', 2);
 INSERT INTO tb_matricula(id_aluno, id_curso) 
 VALUES(1, 1);
 
-INSERT INTO tb_questao(questao, id_curso) 
-VALUES("2+2x2", 1);
+INSERT INTO tb_questao(descricao, id_curso, alternativa_a, alternativa_b, alternativa_c, 
+alternativa_d, alternativa_e, alternativa_correta) 
+VALUES("2+2x2", 1, '5','2','4','0','6', 'e');
 
-INSERT INTO tb_alternativa(at_1, at_2, at_3, at_4, at_correta, id_questao) 
-VALUES('5','2','4','6','6', 1);
-
-INSERT INTO tb_avaliacao( nota_final, id_aluno, id_curso) 
-VALUES(8.8, 1, 1);
+INSERT INTO tb_avaliacao( nota_final, id_aluno, id_curso, id_questao) 
+VALUES(8.8, 1, 1, 1);
 
