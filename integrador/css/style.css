@@ -1,0 +1,81 @@
+/*BACK*/
+.back{
+    background-color: salmon;
+
+    margin-top: -100px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 5em;
+    text-align: center;
+    
+}
+.back:hover{
+    background-color: sandybrown;
+}
+
+
+
+
+/*CARDS CURSOS*/
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*CONTEUDO CARDS*/
+.card-item {
+  /*display: flex;*/
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e5e5e5;
+  transition: .1s height linear;
+}
+
+
+
+.card-item:before {
+  content: "Hover para expandir o card";
+  font-size: 13px;
+  color: #757575;
+}
+
+.card-item:hover {
+  height: 150px;
+
+}
+
+
+
+@media (min-width: 1024px) {
+  .card-item {
+    width: 30%;
+    height: 150px;
+  }
+  
+  .card-item:before {
+    content: none;
+  }
+}
+
+
+@media (max-width: 480px) {
+    .card-item {
+      width: 100%;
+      height: 170px;
+    }
+    
+    .card-item:before {
+      content: none;
+    }
+  }
