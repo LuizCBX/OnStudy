@@ -83,14 +83,14 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
                             </a>
                         </li>
                         <li class="sidebar-dropdown">
-                            <a href="login.php">
+                            <a href="#">
                                 <i class="fa fa-chart-line"></i>
                                 <span class="menu-text">Notas</span>
                             </a>
  
                         </li>
                         <li class="sidebar-dropdown">
-                            <a href="#">
+                            <a href="cursos.php">
                                 <i class="fa fa-globe"></i>
                                 <span class="menu-text">Cursos</span>
                             </a>
@@ -187,10 +187,10 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
                     </div>
 
                     <div class="form-group col-md-12">
-                        <!--Toggle-sidebar-->
-                        <!--<a id="toggle-sidebar" class="btn btn-secondary rounded-0" href="#">
+                        
+                        <a id="toggle-sidebar" style="margin-top: -80px; margin-left: -20px; class="btn btn-secondary rounded-0" href="#">
                             <span class="fas fa-arrow-circle-left"></span>
-                        </a>-->
+                        </a>
                         <a id="pin-sidebar" style="margin-top: -80px; margin-left: -20px;" class="btn btn-outline-secondary rounded-0" href="#">
                             <span class="fas fa-arrows-alt-h"></span>
                         </a>
