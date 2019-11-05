@@ -8,8 +8,8 @@
         <a href="#" class="btn btn-primary">Visitar</a>
     </li>
     <li class="card-item">
-        <h5 class="card-title">Título especial</h5>
-        <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+        <h5 class="card-title"><?php echo $_SESSION['nome'] ?></h5>
+        <p class="card-text"><?php echo $_SESSION['descricao']  ?></p>
         <a href="#" class="btn btn-primary">Visitar</a>
     </li>
     <li class="card-item">

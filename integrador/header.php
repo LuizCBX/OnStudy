@@ -2,9 +2,11 @@
 session_start();
 require_once 'auth/autenticacao.php';
 require_once 'Model/AlunoModel.php';
+require_once 'Model/CursoModel.php';
 
 
-
+$cursos = new CursoModel();
+$curso = $cursos->getCursoByNome($_SESSION['nome_curso']);
 
 $alunos = new AlunoModel();
 $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
