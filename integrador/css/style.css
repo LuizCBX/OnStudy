@@ -1,81 +1,97 @@
 /*BACK*/
 .back{
-    background-color: salmon;
 
-    margin-top: -100px;
-    margin-left: 25px;
-    margin-right: 25px;
-    font-size: 5em;
+    background-color: #363636;
+    margin-top: -109px;
+    margin-left: -48px;  
+    margin-right: -48px;
+    font-size: 50px;
     text-align: center;
-    
+    color: #ffffff;
+
 }
 .back:hover{
-    background-color: sandybrown;
+    background-color: #555555;
+    transition-delay: 0.1s;
 }
 
+  /*CARDS CURSOS*/
 
-
-
-/*CARDS CURSOS*/
-
-.card-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-/*CONTEUDO CARDS*/
-.card-item {
-  /*display: flex;*/
-  align-items: flex-end;
-  justify-content: center;
-  width: 100%;
-  height: 100px;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #e5e5e5;
-  transition: .1s height linear;
-}
-
-
-
-.card-item:before {
-  content: "Hover para expandir o card";
-  font-size: 13px;
-  color: #757575;
-}
-
-.card-item:hover {
-  height: 150px;
-
-}
-
-
-
-@media (min-width: 1024px) {
-  .card-item {
-    width: 30%;
-    height: 150px;
+  .cards-list {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   
-  .card-item:before {
-    content: none;
+  .card {
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
   }
-}
-
-
-@media (max-width: 480px) {
-    .card-item {
-      width: 100%;
-      height: 170px;
-    }
-    
-    .card-item:before {
-      content: none;
+  
+  .card .card_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+  }
+  
+  .card .card_image img {
+    width: inherit;
+    height: inherit;
+    border-radius:  40px;
+    object-fit: cover;
+  }
+  
+  .card .card_title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -140px;
+    height: 40px;
+  }
+  
+  .card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+  
+  .title-white {
+    color: black;
+  }
+  
+  .title-black {
+    color: black;
+  }
+  
+  @media all and (max-width: 500px) {
+    .card-list {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
     }
   }
+  
+
+  /*
+  .card {
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    transition: 0.4s;
+  }
+  */
