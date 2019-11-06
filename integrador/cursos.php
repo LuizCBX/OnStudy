@@ -1,23 +1,31 @@
-<?php include 'header.php';?>
+<?php include 'header.php';?>  
+
+<div class="back">Cursos</div>
 
 
-<ul class="card-list">
-    <li class="card-item">
-        <h5 class="card-title">Título especial</h5>
-        <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-        <a href="#" class="btn btn-primary">Visitar</a>
-    </li>
-    <li class="card-item">
-        <h5 class="card-title"><?php echo $_SESSION['nome'] ?></h5>
-        <p class="card-text"><?php echo $_SESSION['descricao']  ?></p>
-        <a href="#" class="btn btn-primary">Visitar</a>
-    </li>
-    <li class="card-item">
-            <h5 class="card-title"><?= $aluno->nome ?></h5>
-        <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-        <a href="#" class="btn btn-primary">Visitar</a>
-    </li>
-</ul>
+<div class="cards-list">
+  
+    <a href="aula.php">
+    <div class="card 1">
+        <div class="card_image">  </div>
+        <div class="card_title title-white">
+            <h1><?php echo $_SESSION['nome'] ?></h1>
+            <p><?php echo $_SESSION['descricao'] ?></p>
+        </div>
+    </div>
+    </a>
+    
+    <a href="aula.php">
+    <div class="card 1">
+        <div class="card_image">  </div>
+        <div class="card_title title-white">
+            <h1><?php echo $_SESSION['nome'] ?></h1>
+            <p><?php echo $_SESSION['descricao'] ?></p>
+        </div>
+    </div>
+    </a>
+</div>
+
 
 
 <?php include 'footer.php'; ?>

@@ -2,11 +2,6 @@
 session_start();
 require_once 'auth/autenticacao.php';
 require_once 'Model/AlunoModel.php';
-require_once 'Model/CursoModel.php';
-
-
-$cursos = new CursoModel();
-$curso = $cursos->getCursoByNome($_SESSION['nome_curso']);
 
 $alunos = new AlunoModel();
 $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
@@ -194,16 +189,16 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
 
                     <div class="form-group col-md-12">
 
-                        <a id="toggle-sidebar" style="margin-top: -80px; margin-left: -20px; class="btn btn-secondary rounded-0" href="#">
+                        <a id="toggle-sidebar" style="margin-top: -80px; margin-left: -30px;" class="btn btn-secondary rounded-0" 
+                        href="#">
                             <span class="fas fa-arrow-circle-left"></span>
                         </a>
 
-                        <a id="pin-sidebar" style="margin-top: -80px; margin-left: -20px;" class="btn btn-outline-secondary rounded-0" href="#">
+                        <!--<a id="pin-sidebar" style="margin-top: -80px; margin-left: -20px;" class="btn btn-outline-secondary rounded-0" href="#">
                             <span class="fas fa-arrows-alt-h"></span>
-                        </a>
+                        </a>-->
 
                     </div>
                 </div>
-                <div class="back">teste
-                    
-                </div>
+
+  
