@@ -3,7 +3,6 @@ session_start();
 require_once 'auth/autenticacao.php';
 require_once 'Model/AlunoModel.php';
 
-
 $alunos = new AlunoModel();
 $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
 
@@ -26,6 +25,7 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
     <link rel="stylesheet" href="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/sidebar-themes.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 </head>
@@ -53,12 +53,13 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
                         </span>
                     </div>
                 </div>
-     
+               
+
                 <!-- sidebar-menu  -->
                 <div class=" sidebar-item sidebar-menu">
                     <ul>
                         <li class="header-menu">
-                            <span>General</span>
+                            <span>Menu</span>
                         </li>
                         <li class="sidebar-dropdown">
                             <a href="painel.php">
@@ -83,14 +84,14 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
                             </a>
                         </li>
                         <li class="sidebar-dropdown">
-                            <a href="login.php">
+                            <a href="#">
                                 <i class="fa fa-chart-line"></i>
                                 <span class="menu-text">Notas</span>
                             </a>
  
                         </li>
                         <li class="sidebar-dropdown">
-                            <a href="#">
+                            <a href="cursos.php">
                                 <i class="fa fa-globe"></i>
                                 <span class="menu-text">Cursos</span>
                             </a>
@@ -187,13 +188,17 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
                     </div>
 
                     <div class="form-group col-md-12">
-                        <!--Toggle-sidebar-->
-                        <!--<a id="toggle-sidebar" class="btn btn-secondary rounded-0" href="#">
+
+                        <a id="toggle-sidebar" style="margin-top: -80px; margin-left: -30px;" class="btn btn-secondary rounded-0" 
+                        href="#">
                             <span class="fas fa-arrow-circle-left"></span>
-                        </a>-->
-                        <a id="pin-sidebar" style="margin-top: -80px; margin-left: -20px;" class="btn btn-outline-secondary rounded-0" href="#">
-                            <span class="fas fa-arrows-alt-h"></span>
                         </a>
+
+                        <!--<a id="pin-sidebar" style="margin-top: -80px; margin-left: -20px;" class="btn btn-outline-secondary rounded-0" href="#">
+                            <span class="fas fa-arrows-alt-h"></span>
+                        </a>-->
 
                     </div>
                 </div>
+
+  
