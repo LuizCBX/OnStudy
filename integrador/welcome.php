@@ -51,7 +51,7 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
             <img src="imagens/loading1.gif">
         </div>
 
-        <h1 class="logo">OnStudyOff</h1>
+        <h1 class="logo">OnStudy</h1>
     </div>
 
 

@@ -1,31 +1,29 @@
-<?php include 'header.php';?>  
+<?php include 'header.php';
+$cursoDoAluno = $alunos->getCursoPorId($_SESSION['id_usuario']);
+?>
 
 <div class="back">Cursos</div>
 
 
 <div class="cards-list">
-  
-    <a href="aula.php">
+
+
+    <?php    while($linha = mysqli_fetch_assoc($cursoDoAluno))   {   ?>
+
+    <a href=aula.php?id_curso=<?php echo $linha['id']?> >
     <div class="card 1">
-        <div class="card_image">  </div>
+        <div class="card_image"><img src="imagens/Bgcard.png"> </div>
         <div class="card_title title-white">
-            <h1><?php echo $_SESSION['nome'] ?></h1>
-            <p><?php echo $_SESSION['descricao'] ?></p>
+            <h1 class="titulo"><?php echo $linha['nome'] ?></h1>
+            <p><?php echo $linha['descricao'] ?></p>
+            <p>Nota mínima: <?php echo $linha['nota_minima'] ?></p>
         </div>
     </div>
     </a>
     
-    <a href="aula.php">
-    <div class="card 1">
-        <div class="card_image">  </div>
-        <div class="card_title title-white">
-            <h1><?php echo $_SESSION['nome'] ?></h1>
-            <p><?php echo $_SESSION['descricao'] ?></p>
-        </div>
-    </div>
-    </a>
-</div>
-
+    <?php
+    }
+    ?>
 
 
 <?php include 'footer.php'; ?>
