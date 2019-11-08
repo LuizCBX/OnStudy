@@ -6,6 +6,7 @@ require_once 'Model/AlunoModel.php';
 $alunos = new AlunoModel();
 $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
 
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
-    <title>Home - OnStudyOff</title>
+    <title>Home - OnStudy</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -36,7 +37,7 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
             <div class="sidebar-content">
                 <!-- sidebar-brand  -->
                 <div class="sidebar-item sidebar-brand">
-                    <a href="#">OnStudyOff</a>
+                    <a href="#">OnStudy</a>
                 </div>
                 <!-- sidebar-header  -->
                 <div class="sidebar-item sidebar-header d-flex flex-nowrap">
@@ -84,9 +85,9 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
                             </a>
                         </li>
                         <li class="sidebar-dropdown">
-                            <a href="#">
+                            <a href="prova.php">
                                 <i class="fa fa-chart-line"></i>
-                                <span class="menu-text">Notas</span>
+                                <span class="menu-text">Provas</span>
                             </a>
  
                         </li>
@@ -191,7 +192,7 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
 
                         <a id="toggle-sidebar" style="margin-top: -80px; margin-left: -30px;" class="btn btn-secondary rounded-0" 
                         href="#">
-                            <span class="fas fa-arrow-circle-left"></span>
+                            <span class="fas fa-arrows-alt-h"></span>
                         </a>
 
                         <!--<a id="pin-sidebar" style="margin-top: -80px; margin-left: -20px;" class="btn btn-outline-secondary rounded-0" href="#">

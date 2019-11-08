@@ -36,7 +36,7 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
             <div class="sidebar-content">
                 <!-- sidebar-brand  -->
                 <div class="sidebar-item sidebar-brand">
-                    <a href="#">OnStudyOff</a>
+                    <a href="#">OnStudy</a>
                 </div>
                 <!-- sidebar-header  -->
                 <div class="sidebar-item sidebar-header d-flex flex-nowrap">
@@ -83,9 +83,9 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
                             </a>
                         </li>
                         <li class="sidebar-dropdown">
-                            <a href="#">
+                            <a href="prova.php">
                                 <i class="fa fa-chart-line"></i>
-                                <span class="menu-text">Notas</span>
+                                <span class="menu-text">Provas</span>
                             </a>
  
                         </li>
@@ -188,13 +188,13 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
 
                     <div class="form-group col-md-12">
                         
-                        <a id="toggle-sidebar" style="margin-top: -80px; margin-left: -20px; class="btn btn-secondary rounded-0" href="#">
-                            <span class="fas fa-arrow-circle-left"></span>
-                        </a>
-                        <a id="pin-sidebar" style="margin-top: -80px; margin-left: -20px;" class="btn btn-outline-secondary rounded-0" href="#">
+                        <a id="toggle-sidebar" style="margin-top: -80px; margin-left: -30px" class="btn btn-secondary rounded-0" href="#">
                             <span class="fas fa-arrows-alt-h"></span>
                         </a>
-
+                        <!--<a id="pin-sidebar" style="margin-top: -80px; margin-left: -20px;" class="btn btn-outline-secondary rounded-0" href="#">
+                            <span class="fas fa-arrows-alt-h"></span>
+                        </a>
+                        -->
                     </div>
                 </div>
                 <hr>
