@@ -103,9 +103,17 @@ CREATE TABLE tb_avaliacao(
     id_curso int not null,
     id_questao int not null,
 	constraint fk_aluno_pk_av foreign key (id_aluno) references tb_aluno(id),
-	constraint fk_questao_pk_av foreign key (id_questao) references tb_questao(id),
+	constraint fk_questao_pk_av foreign key (id_questao) references tb_questoes_avaliacao(id_questao),
 	constraint fk_curso_pk_av foreign key (id_curso) references tb_curso(id)
 )engine InnoDB;
 
+
+DROP TABLE IF EXISTS `tb_questoes_avaliacao`;
+CREATE TABLE tb_questoes_avaliacao(
+	id_avaliacao int not null,
+    id_questao int not null,
+	constraint fk_questao foreign key (id_questao) references tb_questao(id),
+	constraint fk_avaliacao foreign key (id_avaliacao) references tb_avaliacao(id)
+)engine InnoDB;
 
 

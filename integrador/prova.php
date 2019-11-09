@@ -1,17 +1,25 @@
-<?php include 'header.php'; ?>
+<?php
 
-<h1>Prova de :: 6/2019</h1>
+include_once 'header.php';
+include_once 'Controller/AvaliacaoController.php';
+
+$avaliacaoC = new AvaliacaoController();
+$id = $_SESSION['id_usuario'];
+$res = $avaliacaoC->iniciarAvaliacao($id, 1);
+
+$cont = 1;
+?>
+<h2>Prova de :: <?= $avaliacaoC->getData_av() ?></h2>
 
 <style>
     .alternativa-descricao {
         color: black;
         background-color: white !important;
-        pointer-events: none;
-        touch-action: none;
     }
 
     .alternativa {
         width: 50px;
+        height: 50px;
         display: block;
     }
 
@@ -23,60 +31,82 @@
 
 </style>
 <hr>
-<section>
-    <span id="" class="m-3"><strong>Questão - 1</strong></span>
+<?php foreach($res as $questao): ?>
+<section class="mt-5">
+    <span id="" class="m-3"><strong>Questão <?= $cont ?></strong></span>
     <p class="m-3">
-        O que é Lorem Ipsum?
+        <?= $questao['descricao'] ?>
     </p>
     <div>
-        <div class="input-group col-12">
+        <div class="input-group col-12 mt-3">
 
-            <div class="input-group-prepend">
-                <button id="alternativa-a" class="input-group-text alternativa">A</button>
+            <div class="input-group col-1">
+                <button id="alternativa-a" class="input-group-text alternativa col-12">A</button>
             </div>
-            <input type="text" readonly class="form-control alternativa-descricao " aria-label="Input text com bot�o radio " value="ALTERNATIVA A">
-            
-        </div>
-        <div class="input-group col-12">
-
-            <div class="input-group-prepend">
-                <button id="alternativa-b" class="input-group-text alternativa">B</button>
-            </div>
-            <input type="text" readonly class="form-control alternativa-descricao" aria-label="Input text com bot�o radio " value="       ">
-
-        </div>
-        <div class="input-group col-12">
-
-            <div class="input-group col-2">
-                <button id="alternativa-c" class="input-group-text alternativa">C</button>
-            </div>
-            <div class="col-6">
-                <p class="alternativa-descricao">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium doloremque 
-        laboriosam nam architecto, mollitia cum tempore odit numquam illo temporibus corrupti 
-        cupiditate aperiam velit veniam tempora rerum doloribus nesciunt.
+            <div class="col-11">
+                <p class="alternativa-descricao  col-12">
+                    <?= $questao['alternativa_a'] ?>
                 </p>
             </div>
-
+            
         </div>
-        <div class="input-group col-12">
+        <div class="input-group col-12 mt-2">
 
-            <div class="input-group-prepend">
-                <button id="alternativa-d" class="input-group-text alternativa">D</button>
+            <div class="input-group col-1">
+                <button id="alternativa-b" class="input-group-text alternativa col-12">B</button>
             </div>
-            <input type="text" readonly class="form-control alternativa-descricao" aria-label="Input text com bot�o radio " value="ALTERNATIVA D">
-
-        </div>
-        <div class="input-group col-12">
-
-            <div class="input-group-prepend">
-                <button id="alternativa-b" class="input-group-text alternativa">E</button>
+            <div class="col-11">
+                <p class="alternativa-descricao  col-12">
+                    <?= $questao['alternativa_b'] ?>
+                </p>
             </div>
-            <input type="text" readonly class="form-control alternativa-descricao" aria-label="Input text com bot�o radio " value="ALTERNATIVA E">
-
+            
         </div>
+        <div class="input-group col-12 mt-2">
+
+            <div class="input-group col-1">
+                <button id="alternativa-c" class="input-group-text alternativa col-12">C</button>
+            </div>
+            <div class="col-11">
+                <p class="alternativa-descricao  col-12">
+                    <?= $questao['alternativa_c'] ?>
+                </p>
+            </div>
+            
+        </div>
+        <div class="input-group col-12 mt-2">
+
+            <div class="input-group col-1">
+                <button id="alternativa-d" class="input-group-text alternativa col-12">D</button>
+            </div>
+            <div class="col-11">
+                <p class="alternativa-descricao  col-12">
+                    <?= $questao['alternativa_d'] ?>
+                </p>
+            </div>
+            
+        </div>
+        <div class="input-group col-12 mt-2">
+
+            <div class="input-group col-1">
+                <button id="alternativa-e" class="input-group-text alternativa col-12">E</button>
+            </div>
+            <div class="col-11">
+                <p class="alternativa-descricao  col-12">
+                    <?= $questao['alternativa_e'] ?>
+                </p>
+            </div>
+            
+        </div>
+      
     </div>
 </section>
+<?php 
+
+$cont++;
+
+endforeach; 
+?>
 
 <nav class="col-12 text-center mt-5">
     <button id="anterior" class="btn btn-info">Anterior</button>
@@ -108,7 +138,7 @@
 
 
     $(".alternativa").click(function(elements) {
-
+console.log(elements)
         $(".alternativa").removeClass("alternativa-escolhida")
         e = elements.target
         e.classList.add("alternativa-escolhida")
