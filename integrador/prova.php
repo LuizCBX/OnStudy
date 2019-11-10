@@ -37,11 +37,11 @@ $cont = 1;
     <p class="m-3">
         <?= $questao['descricao'] ?>
     </p>
-    <div>
+    <div questao="<?= $cont ?>" >
         <div class="input-group col-12 mt-3">
 
             <div class="input-group col-1">
-                <button id="alternativa-a" class="input-group-text alternativa col-12">A</button>
+                <button class="input-group-text alternativa col-12">A</button>
             </div>
             <div class="col-11">
                 <p class="alternativa-descricao  col-12">
@@ -53,7 +53,7 @@ $cont = 1;
         <div class="input-group col-12 mt-2">
 
             <div class="input-group col-1">
-                <button id="alternativa-b" class="input-group-text alternativa col-12">B</button>
+                <button class="input-group-text alternativa col-12">B</button>
             </div>
             <div class="col-11">
                 <p class="alternativa-descricao  col-12">
@@ -65,7 +65,7 @@ $cont = 1;
         <div class="input-group col-12 mt-2">
 
             <div class="input-group col-1">
-                <button id="alternativa-c" class="input-group-text alternativa col-12">C</button>
+                <button class="input-group-text alternativa col-12">C</button>
             </div>
             <div class="col-11">
                 <p class="alternativa-descricao  col-12">
@@ -77,7 +77,7 @@ $cont = 1;
         <div class="input-group col-12 mt-2">
 
             <div class="input-group col-1">
-                <button id="alternativa-d" class="input-group-text alternativa col-12">D</button>
+                <button class="input-group-text alternativa col-12">D</button>
             </div>
             <div class="col-11">
                 <p class="alternativa-descricao  col-12">
@@ -89,7 +89,7 @@ $cont = 1;
         <div class="input-group col-12 mt-2">
 
             <div class="input-group col-1">
-                <button id="alternativa-e" class="input-group-text alternativa col-12">E</button>
+                <button  class="input-group-text alternativa col-12">E</button>
             </div>
             <div class="col-11">
                 <p class="alternativa-descricao  col-12">
@@ -109,8 +109,7 @@ endforeach;
 ?>
 
 <nav class="col-12 text-center mt-5">
-    <button id="anterior" class="btn btn-info">Anterior</button>
-    <button id="proxima" class="btn btn-info">Próxima</button>
+    <button id="enviar" class="btn btn-info">Enviar</button>
 </nav>
 
 
@@ -120,26 +119,31 @@ endforeach;
 <script>
     
     let alternativa = null
+    const totalQuestoes = $("[questao]").length
 
-    const numQuestaoAtual = 1
-    const numTotalQuestao = 10
-    
-    $(document).ready(function () {
-        if (numQuestaoAtual == 1) {
-            $("#anterior").prop("disabled", true)
+
+    $("#enviar").click(function(event) {
+        event.preventDefault()
+
+        totalQuestoesResp = $(".alternativa-escolhida").length
+        if (totalQuestoes == totalQuestoesResp) {
+
+            $("[questao]")
+            $.post( "prova.php", { name: "John", time: "2pm" })
+            .done(function( data ) {
+                alert( "Data Loaded: " + data );
+            });
         }
-
-        if (numQuestaoAtual == numTotalQuestao) {
-            $("#proxima").prop("disabled", true)
+        else {
+            alert("RESPONDA TODAS AS QUESTOES")
         }
-
     })
-        
 
 
     $(".alternativa").click(function(elements) {
-console.log(elements)
-        $(".alternativa").removeClass("alternativa-escolhida")
+
+        const parents = $(elements.target).parents("[questao]")
+        $(parents).find("button").removeClass("alternativa-escolhida")
         e = elements.target
         e.classList.add("alternativa-escolhida")
         alternativa = e.innerText;
