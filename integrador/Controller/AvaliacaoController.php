@@ -4,17 +4,9 @@ require_once __DIR__.'/../Model/AvaliacaoModel.php';
 
 class AvaliacaoController
 {
-    private $alternativaSelecionada;
     private $data_av;
     private $id_curso;
     private $id_avaliacao;
-    private $descricao;
-    private $a;
-    private $b;
-    private $c;
-    private $d;
-    private $e;
-    private $respostaCerta;
 
     public function iniciarAvaliacao($ra, $id_curso)
     {
@@ -27,21 +19,6 @@ class AvaliacaoController
         $questoes = $avaliacaoModel->getQuestoes($this->id_avaliacao);
         
         return $questoes;
-    }
-
-    public function construirAvaliacao()
-    {
-        $avaliacaoModel = new AvaliacaoModel();
-        $avaliacaoModel = $avaliacaoModel->getAvaliacaoById(1);
-        $this->a = $avaliacaoModel->alternativa_a;
-        $this->b = $avaliacaoModel->alternativa_b;
-        $this->c = $avaliacaoModel->alternativa_c;
-        $this->d = $avaliacaoModel->alternativa_d;
-        $this->e = $avaliacaoModel->alternativa_e;
-        $this->respostaCerta = $avaliacaoModel->alternativa_correta;
-        $this->descricao = $avaliacaoModel->descricao;
-        $this->id_curso = $avaliacaoModel->id_curso;
-
     }
 
     public function finalizarAvaliacao()
