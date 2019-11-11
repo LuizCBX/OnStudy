@@ -17,6 +17,22 @@
 
   /*CARDS CURSOS*/
 
+  .titulo{
+    color: #DC9A00;
+    text-align: center;
+    text-decoration: none;
+    margin-top: -100px;
+
+  }
+
+  p{
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16pt;
+  }
+
+
   .cards-list {
     z-index: 0;
     width: 100%;
@@ -64,13 +80,7 @@
       -5px -5px 30px 15px rgba(0,0,0,0.22);
   }
   
-  .title-white {
-    color: black;
-  }
-  
-  .title-black {
-    color: black;
-  }
+
   
   @media all and (max-width: 500px) {
     .card-list {
