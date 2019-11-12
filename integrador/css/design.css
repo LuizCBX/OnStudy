@@ -1,0 +1,28 @@
+
+/*TEXTO CARDS*/
+.h1_{
+    color: #DC9A00;
+    text-align: center;
+    text-decoration: none;
+    margin-top: -100px;
+
+  }
+
+  .p_{
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16pt;
+  }
+
+
+  /*WELCOME*/
+  .imgHome {
+    width: 50%;
+    text-align: center;
+  }
+
+  .logo{
+    text-align: center;
+    font-size: 10.0em;
+  }

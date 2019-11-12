@@ -17,20 +17,6 @@
 
   /*CARDS CURSOS*/
 
-  .titulo{
-    color: #DC9A00;
-    text-align: center;
-    text-decoration: none;
-    margin-top: -100px;
-
-  }
-
-  p{
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16pt;
-  }
 
 
   .cards-list {
@@ -105,3 +91,10 @@
     transition: 0.4s;
   }
   */
+
+  body{
+    background-color: red;
+  }
+
+
+  
