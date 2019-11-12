@@ -27,8 +27,10 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/sidebar-themes.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/design.css">
+    <link rel="stylesheet" href="css/calendar.css">
 
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="imagens/icon.png" />
 </head>
 
 <body>

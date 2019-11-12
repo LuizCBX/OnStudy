@@ -14,9 +14,9 @@ $cursoDoAluno = $alunos->getCursoPorId($_SESSION['id_usuario']);
     <div class="card 1">
         <div class="card_image"><img src="imagens/Bgcard.png"> </div>
         <div class="card_title title-white">
-            <h1 class="titulo"><?php echo $linha['nome'] ?></h1>
-            <p><?php echo $linha['descricao'] ?></p>
-            <p>Nota mínima: <?php echo $linha['nota_minima'] ?></p>
+            <h1 class="h1_"><?php echo $linha['nome'] ?></h1>
+            <p class="p_"><?php echo $linha['descricao'] ?></p>
+            <p class="p_">Nota mínima: <?php echo $linha['nota_minima'] ?></p>
         </div>
     </div>
     </a>

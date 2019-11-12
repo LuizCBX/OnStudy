@@ -22,11 +22,12 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['nome'])) {
 </head>
 
 <body>
+
     <section class="hero is-success is-fullheight">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
-                    <h3 class="title has-text-grey">OnStudyOff</h3>
+                    <h3 class="title has-text-grey">OnStudy</h3>
                     <h3 class="title has-text-grey">A sua plataforma de estudo</a></h3>
                     <?php
                     if(isset($_SESSION['nao_autenticado'])):
