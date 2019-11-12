@@ -1,19 +1,4 @@
-/*BACK*/
-.back{
 
-    background-color: #363636;
-    margin-top: -109px;
-    margin-left: -48px;  
-    margin-right: -48px;
-    font-size: 50px;
-    text-align: center;
-    color: #ffffff;
-
-}
-.back:hover{
-    background-color: #555555;
-    transition-delay: 0.1s;
-}
 
   /*CARDS CURSOS*/
 
@@ -92,9 +77,6 @@
   }
   */
 
-  body{
-    background-color: red;
-  }
 
 
   
