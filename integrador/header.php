@@ -34,7 +34,7 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
 </head>
 
 <body>
-    <div class="page-wrapper default-theme sidebar-bg bg1 toggled">
+    <div class="page-wrapper chiller-theme sidebar-bg bg1 toggled">
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
                 <!-- sidebar-brand  -->
@@ -67,7 +67,7 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
                         <li class="sidebar-dropdown">
                             <a href="painel.php">
                                 <i class="fa fa-tachometer-alt"></i>
-                                <span class="menu-text">Dashboard</span>
+                                <span class="menu-text">Página inicial</span>
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
@@ -203,5 +203,6 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
 
                     </div>
                 </div>
+                
 
   
