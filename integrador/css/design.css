@@ -1,4 +1,11 @@
 
+
+
+/** FONTS */
+
+@import url('https://fonts.googleapis.com/css?family=Passion+One&display=swap');
+
+
 /*TEXTO CARDS*/
 .h1_{
     color: #DC9A00;
@@ -32,3 +39,47 @@
     transition-delay: 0.1s;
   }
 
+  /*WELCOME*/
+  .imgHome {
+    text-align: center;
+  }
+
+  .titulo {
+    margin-top: 80px;
+    text-align: center;
+    color: black;
+    font-size: 5em;
+    font-family: 'Passion One', cursive;
+  }
+
+  .st {
+    text-align: center;
+    color: black;
+    font-size: 5em;
+    font-family: 'Passion One', cursive;
+  }
+
+  .logo{
+    text-align: center;
+  }
+
+
+  /*RESPONSIVO*/  
+
+/*
+  @media screen and (max-width: 480px){
+
+  
+  .titulo{
+    font-size: 20px;  
+    font-family: 'Passion One', cursive;
+    text-align: center;
+  }
+
+  .st {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Passion One', cursive;
+  }
+
+*/
