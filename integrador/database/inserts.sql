@@ -31,10 +31,15 @@ VALUES('Excel Avançado', '7 aulas', 7.0);
 INSERT INTO tb_aula(nome, descricao, id_curso) 
 VALUES('Algoritmos', 'Estrutura Básica', 1);
 
-INSERT INTO tb_aula(nome, descricao, id_curso) 
-VALUES('Matemática Aplicada', 'Estrutura Básica', 1);
+INSERT INTO tb_aula(nome, descricao, url_video, id_curso) 
+VALUES('Lógica', 
+	   'Estrutura Básica',
+       '<iframe width="560" height="315" src="https://www.youtube.com/embed/h1FiBei6plo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+       1
+      );
 
-INSERT INTO tb_aula(nome, descricao, id_curso) 
+
+INSERT INTO tb_aula(nome, descricao, id_curso, url_video, url_pdf) 
 VALUES('Lógica com Python', 'Estrutura Básica', 1);
 
 INSERT INTO tb_aula(nome, descricao, id_curso) 
