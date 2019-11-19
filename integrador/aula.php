@@ -2,15 +2,32 @@
 $cursoDoAluno = $alunos->getAulaPorCurso($_GET['id_curso']);
 ?>
 
+<style>
+
+.teste{
+    display:none;
+    
+}
+
+</style>
 
 <script>
     function abrir(identificador){
-        document.getElementById(identificador).style.display="block";
+       var elemento = document.getElementById(identificador);
+
+       if(elemento.style.display=="block"){
+           elemento.style.display="none";
+           
+       }
+       else{
+            elemento.style.display="block";
+           
+       }
     }
 
-    function fecharAula(fechada){
-        document.getElementById(fechada).style.display="none";
-    }
+    // function fecharAula(fechada){
+    //     document.getElementById(fechada).style.display="none";
+    // }
 
     
 
@@ -34,7 +51,7 @@ $cursoDoAluno = $alunos->getAulaPorCurso($_GET['id_curso']);
                 ."</button></li>";
 
                 
-                echo "<div class='teste' id=aula".$linha['id']." style=\"display:none\">";
+                echo "<div class='teste' id=aula".$linha['id'].">";
                 echo $linha['descricao'];
                 ?>
 
@@ -52,7 +69,13 @@ $cursoDoAluno = $alunos->getAulaPorCurso($_GET['id_curso']);
     ?>
 
 
+            <p>
 
+            <a href=prova.php?id_curso=<?php echo $_GET['id_curso']; ?>>
+            Realizar prova
+            </a>
+
+            </p>
 
     <div>
 

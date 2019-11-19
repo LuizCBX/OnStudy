@@ -8,4 +8,4 @@ QUESTÕES DE PHP::MATERIA PHP::BIMESTRE/ANO
     <li>Prova 4 - PHP::STATUS - DATA-PROVA</li>
 </ol>
 
-<?php include 'header.php'; ?>
+<?php include 'footer.php'; ?>
