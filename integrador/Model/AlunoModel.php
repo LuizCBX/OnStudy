@@ -20,11 +20,23 @@ class AlunoModel extends Conexao
 
     public function getAulaPorCurso($id)
     {
-        $query = "SELECT c.nome 'curso', c.descricao, a.id, a.nome 'aula', a.descricao from tb_aula a INNER JOIN tb_curso c on a.id_curso=c.id where c.id=$id;";
+        $query = "SELECT c.nome 'curso', c.descricao, a.id, a.nome 'aula', a.descricao, a.url_video from tb_aula a INNER JOIN tb_curso c on a.id_curso=c.id where c.id=$id;";
+        $result = mysqli_query($this->getConexao(), $query);
+        return $result;
+    }
+    public function getCurso($id)
+    {
+        $query = "select nome from tb_curso where id=$id";
         $result = mysqli_query($this->getConexao(), $query);
         return $result;
     }
 
+    public function getQuestoes($id)
+    {
+        $query = "select * from tb_questao where id_curso=$id";
+        $result = mysqli_query($this->getConexao(), $query);
+        return $result;
+    }
 
 }
 
