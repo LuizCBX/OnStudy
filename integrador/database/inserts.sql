@@ -39,8 +39,12 @@ VALUES('Lógica',
       );
 
 
-INSERT INTO tb_aula(nome, descricao, id_curso, url_video, url_pdf) 
-VALUES('Lógica com Python', 'Estrutura Básica', 1);
+INSERT INTO tb_aula(nome, descricao, url_video, id_curso) 
+VALUES('Algoritmo', 
+	   'Estrutura Básica',
+       '<iframe width="560" height="315" src="https://www.youtube.com/embed/h1FiBei6plo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+       1
+      );
 
 INSERT INTO tb_aula(nome, descricao, id_curso) 
 VALUES('POO', 'Estrutura Básica', 2);
@@ -73,16 +77,17 @@ VALUES("10x2", 1, '5','2','6','1','20', "E");
 INSERT INTO tb_questao(descricao, id_curso, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_e, alternativa_correta) 
 VALUES("2+0", 1, '5','2','4','6','7', "B");
 
+
+
+INSERT INTO tb_avaliacao( nota_final, id_aluno, id_curso, id_questao) 
+VALUES(8.8, 1, 1, 1);
+
 INSERT INTO tb_questoes_avaliacao( id_avaliacao, id_questao) 
 VALUES(1, 1),
 	  (1, 2),
       (1, 3),
 	  (1, 4),
 	  (1, 5);
-
-INSERT INTO tb_avaliacao( nota_final, id_aluno, id_curso, id_questao) 
-VALUES(8.8, 1, 1, 1);
-
 
 
 
