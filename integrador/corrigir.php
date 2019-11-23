@@ -1,5 +1,8 @@
 <?php include 'header.php'; 
 
+$idcurso = $_POST['id_curso'];
+$idaluno = $_SESSION['id'];
+
 echo "<br>primeira resposta -> ".$_POST['questao1'];
 echo "<br>segunda resposta -> ".$_POST['questao2'];
 echo "<br>terceira resposta -> ".$_POST['questao3'];
@@ -59,7 +62,22 @@ if($q6==$atc6){
     $nota++;
 }
 
+
+$media=7;
+
+if($nota >= 7){ //TESTE
+    echo "<br><br>Você foi aprovado!";
+} else {
+    echo "<br><br>Você foi reprovado!";
+}
+
 echo "<br><br>Nota do aluno: ".$nota;
+
+
+
+
+//INSERT
+$alunos->setNota($nota, $idaluno,$idcurso);
 ?>
 
 

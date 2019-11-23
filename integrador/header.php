@@ -87,9 +87,9 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
                             </a>
                         </li>
                         <li class="sidebar-dropdown">
-                            <a href="prova.php">
+                            <a href="nota.php">
                                 <i class="fa fa-chart-line"></i>
-                                <span class="menu-text">Provas</span>
+                                <span class="menu-text">Notas</span>
                             </a>
  
                         </li>

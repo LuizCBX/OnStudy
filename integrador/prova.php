@@ -9,7 +9,7 @@ $questoesAlternativas = $alunos->getQuestoes($_GET['id_curso']);
     <?php
    
     $linha = mysqli_fetch_assoc($tituloCurso);
-    echo $linha['nome'];
+    echo "Avaliação de ".$linha['nome'];
 
     ?>
 
@@ -30,6 +30,10 @@ $questoesAlternativas = $alunos->getQuestoes($_GET['id_curso']);
                 echo "e. <input type=radio name=questao".$questao." value='e'> ".$linha['alternativa_e']."<br>";
                 echo "<input type=hidden name=alternativa_correta".$questao." value=".$linha['alternativa_correta']."><br>";
                 echo "<hr>";
+                echo "<input type=hidden name=id_curso value=".$linha['id_curso']."><br>";
+
+
+
                 $questao++;
             }
             echo "</ol>";
@@ -37,25 +41,25 @@ $questoesAlternativas = $alunos->getQuestoes($_GET['id_curso']);
                 
         ?>  
         <div class='col-12 text-center mt-5'>
-                <button id='enviar' class='btn btn-info'>Enviar</button>
-            </div>
+            <button id='enviar' class='btn btn-info'>Enviar avaliação</button>
+        </div>
                    
     </form>
+
+    <!-- <script src="jquery-2.1.4.min.js"></script>
+    <script src="jquery.validate.min.js"></script>
+    <script>
+            $(function(){
+                $("#enviar").validate();
+            });
+    </script> -->
+
+
 
 
 
     <script>
     
-    // let alt_a = $linha['alternativa_a'], alt_b = $linha['alternativa_b'], alt_c = $linha['alternativa_c'], alt_d = $linha['alternativa_d'], alt_e = $linha['alternativa_e']; 
-
-    // $("#enviar").click(function(event) {
-    //     event.preventDefault()
-
-
-
-
-
-
     // let alternativa = null
     // const totalQuestoes = $(['questao']).length
 
@@ -69,12 +73,6 @@ $questoesAlternativas = $alunos->getQuestoes($_GET['id_curso']);
     // alternativa = e.innerText;
 
     // })
-
-
-
-
-
-
 
     // $("#enviar").click(function(event) {
     //     event.preventDefault()
@@ -94,11 +92,6 @@ $questoesAlternativas = $alunos->getQuestoes($_GET['id_curso']);
     // })
 
     </script>
-
-
-
-
-
 
 
 

@@ -12,6 +12,7 @@
     </script>
     <script src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/validate.js"></script>
 </body>
 
 </html>
