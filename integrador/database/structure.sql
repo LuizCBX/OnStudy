@@ -19,7 +19,7 @@ CREATE TABLE tb_endereco(
     bairro varchar(50),
     cep varchar(15),
     cidade varchar(50),
-    uf varchar(50)
+    uf varchar(3)
 )engine InnoDB;
 
 DROP TABLE IF EXISTS `tb_contato`;
@@ -36,7 +36,7 @@ CREATE TABLE tb_aluno(
     ra int unique not null,
     nome varchar(100) not null,
     cpf varchar(15) not null,
-    dt_nasc date not null,
+    dt_nasc varchar(15) not null,
     id_usuario int not null unique,
     id_end int not null,
     id_contato int not null,
@@ -60,7 +60,7 @@ CREATE TABLE tb_aula(
 	id int auto_increment PRIMARY KEY,
 	nome varchar(50) not null,
     descricao text,
-    url_pdf varchar(100) DEFAULT NULL,
+    url_pdf varchar(200) DEFAULT NULL,
     url_video varchar(250) DEFAULT NULL,    
 	id_curso int not null,
 	constraint fk_curso_pk_aula foreign key (id_curso) references tb_curso(id)
@@ -69,7 +69,7 @@ CREATE TABLE tb_aula(
 DROP TABLE IF EXISTS `tb_matricula`;
 CREATE TABLE tb_matricula(
 	id int auto_increment PRIMARY KEY,
-    data_matricula timestamp default current_timestamp(),
+    data_matricula varchar(110),
 	id_aluno int not null,
 	id_curso int not null,
 	constraint fk_aluno_pk_matri foreign key (id_aluno) references tb_aluno(id),
@@ -97,19 +97,17 @@ CREATE TABLE IF NOT EXISTS `db_ead`.`tb_questao` (
 )engine InnoDB;
 
 
-
 DROP TABLE IF EXISTS `tb_avaliacao`;
 CREATE TABLE tb_avaliacao(
 	id int auto_increment PRIMARY KEY,
-    data_av timestamp default current_timestamp(),
+    data_av varchar(15),
     nota_final decimal (5,2),
 	id_aluno int not null,
     id_curso int not null,
-    id_questao int not null,
 	constraint fk_aluno_pk_av foreign key (id_aluno) references tb_aluno(id),
-	constraint fk_questao_pk_av foreign key (id_questao) references tb_questao(id),
 	constraint fk_curso_pk_av foreign key (id_curso) references tb_curso(id)
 )engine InnoDB;
+
 
 DROP TABLE IF EXISTS `tb_questoes_avaliacao`;
 CREATE TABLE tb_questoes_avaliacao(
