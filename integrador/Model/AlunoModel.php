@@ -20,7 +20,7 @@ class AlunoModel extends Conexao
 
     public function getAulaPorCurso($id)
     {
-        $query = "SELECT c.nome 'curso', c.descricao, a.id, a.nome 'aula', a.descricao, a.url_video from tb_aula a INNER JOIN tb_curso c on a.id_curso=c.id where c.id=$id;";
+        $query = "SELECT c.nome 'curso', c.descricao, a.id, a.nome 'aula', a.descricao, a.url_video, a.url_pdf from tb_aula a INNER JOIN tb_curso c on a.id_curso=c.id where c.id=$id;";
         $result = mysqli_query($this->getConexao(), $query);
         return $result;
     }
@@ -38,6 +38,13 @@ class AlunoModel extends Conexao
         return $result;
     }
 
+    public function setNota($nota, $idaluno,$idcurso){
+        
+    $result_av = "INSERT INTO tb_avaliacao(nota_final, id_aluno, id_curso)VALUES($nota, $idaluno, $idcurso)";
+
+    $inserir = mysqli_query($this->getConexao(), $result_av) or die("Erro ao tentar inserir");
+
+    }
 }
 
 
