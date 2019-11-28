@@ -27,6 +27,11 @@
 * Java: 
 	O Java foi utilizado na criação do  nosso sistema desktop.
 
+
+## Modelo Entidade e Relacionamento <h2> 
+![Alt text](integrador/imagens/structure.PNG?raw=true "Title")
+
+
 ## Contribuindo <h2>
 Leia CONTRIBUTING.md para obter detalhes sobre nosso código de conduta e o processo para enviar solicitações pull para nós.
 ## Versionamento <h2>
