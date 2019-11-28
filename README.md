@@ -1,3 +1,4 @@
+
 # OnStudy <h1> 
 
 #### OnStudy é um programa desenvolvido para oferecer eficiência e praticidade no acesso de cursos on-line de qualquer segmento. OnStudy é composto por  um calendário de provas e atividades, conteúdo programático, cursos diversos e formulário de dúvidas do aluno. <h4> 
@@ -21,8 +22,10 @@
 	O JavaScript foi utilizado na formação dos scripts.
 * Bootstrap:
 	O framework Bootstrap foi utilizado na parte visual do projeto junto com o CSS, nele foram feitas as tabelas, o menu e todos os componentes visuais. O Bootstrap usado foi o 4.
+* Eclipse: 
+	É um ambiente de desenvolvimento integrado para desenvolvimento da linguagem Java e varias outras.
 * Java: 
-O Java foi utilizado na criação do  nosso sistema desktop.
+	O Java foi utilizado na criação do  nosso sistema desktop.
 
 ## Contribuindo <h2>
 Leia CONTRIBUTING.md para obter detalhes sobre nosso código de conduta e o processo para enviar solicitações pull para nós.
