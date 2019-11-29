@@ -52,8 +52,8 @@ public class Matricula extends JFrame {
 	private JPanel panel_1;
 	private JPanel panel_2;
 	private JTextField txtIdCurso;
-	private JComboBox cbCurso;
 	private JLabel lblIdCurso;
+	private JTextField txtCurso;
 
 	/**
 	 * Launch the application.
@@ -94,7 +94,7 @@ public class Matricula extends JFrame {
 				pesquisarMatricula();
 			}
 		});
-		btnNewButton.setBounds(167, 452, 138, 27);
+		btnNewButton.setBounds(170, 452, 138, 27);
 		contentPane.add(btnNewButton);
 		
 		txtPesquisar = new JTextField();
@@ -130,15 +130,10 @@ public class Matricula extends JFrame {
 		panel.add(lblDescrio);
 		
 		txtIdCurso = new JTextField();
+		txtIdCurso.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		txtIdCurso.setBounds(150, 17, 96, 27);
 		panel.add(txtIdCurso);
 		txtIdCurso.setColumns(10);
-		
-		cbCurso = new JComboBox();
-		cbCurso.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		cbCurso.setToolTipText("");
-		cbCurso.setBounds(104, 63, 204, 27);
-		panel.add(cbCurso);
 		txtDescricao = new JTextField();
 		txtDescricao.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		txtDescricao.setBounds(161, 108, 382, 41);
@@ -149,6 +144,12 @@ public class Matricula extends JFrame {
 		lblIdCurso.setFont(new Font("News701 BT", Font.BOLD, 25));
 		lblIdCurso.setBounds(10, 14, 182, 23);
 		panel.add(lblIdCurso);
+		
+		txtCurso = new JTextField();
+		txtCurso.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtCurso.setBounds(108, 65, 242, 27);
+		panel.add(txtCurso);
+		txtCurso.setColumns(10);
 		
 		
 		
@@ -230,7 +231,7 @@ public class Matricula extends JFrame {
 		txtRA.setText(null);
 		txtCPF.setText(null);
 		txtIdCurso.setText(null);
-		cbCurso.addItem(null);
+		txtCurso.setText(null);
 		txtDescricao.setText(null);
 		
 		
@@ -279,7 +280,7 @@ public class Matricula extends JFrame {
 			//
 			if (rs.next()) {
 				
-				cbCurso.addItem(rs.getString(2));
+				txtCurso.setText(rs.getString(2));
 				txtDescricao.setText(rs.getString(3));
 				idMatricula = (rs.getInt(4));
 				

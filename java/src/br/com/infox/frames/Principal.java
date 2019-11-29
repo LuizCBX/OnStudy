@@ -89,7 +89,7 @@ public class Principal extends JFrame {
 		
 		btnCadastrar = new JButton("");
 		btnCadastrar.setIcon(new ImageIcon(Principal.class.getResource("/br/com/infox/icons/add-group.png")));
-		btnCadastrar.setToolTipText("");
+		btnCadastrar.setToolTipText("Cadastro Aluno");
 		btnCadastrar.setBackground(Color.GRAY);
 		btnCadastrar.setForeground(new Color(255, 255, 255));
 		btnCadastrar.addActionListener(new ActionListener() {
@@ -104,6 +104,7 @@ public class Principal extends JFrame {
 		
 		
 		btnSobre = new JButton("");
+		btnSobre.setToolTipText("Sobre");
 		btnSobre.setIcon(new ImageIcon(Principal.class.getResource("/br/com/infox/icons/information.png")));
 		btnSobre.setForeground(Color.WHITE);
 		btnSobre.addActionListener(new ActionListener() {
@@ -118,6 +119,7 @@ public class Principal extends JFrame {
 		contentPane.add(btnSobre);
 		
 		btnCadastrarCurso = new JButton("");
+		btnCadastrarCurso.setToolTipText("Cadastrar Curso");
 		btnCadastrarCurso.setIcon(new ImageIcon(Principal.class.getResource("/br/com/infox/icons/icon_course.png")));
 		btnCadastrarCurso.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

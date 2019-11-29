@@ -8,8 +8,8 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="src/br/com/infox/dal/mysql-connector-java-5.1.47.jar"/>
 	<classpathentry kind="lib" path="jcalendar-1.4.jar"/>
-	<classpathentry kind="lib" path="C:/Leandro/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="C:/Leandro/itextpdf-5.5.9.jar"/>
 	<classpathentry kind="lib" path="src/br/com/infox/frames/rs2xml.jar"/>
+	<classpathentry kind="lib" path="F:/TUDO_ONSTUDY/Projeto_EAD/src/br/com/infox/frames/itextpdf-5.5.9.jar"/>
+	<classpathentry kind="lib" path="F:/TUDO_ONSTUDY/Projeto_EAD/src/br/com/infox/cep/dom4j-1.6.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

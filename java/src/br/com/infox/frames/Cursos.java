@@ -127,6 +127,7 @@ public class Cursos extends JFrame {
 		txtNome.setColumns(10);
 		
 		btnAdicionar = new JButton("");
+		btnAdicionar.setToolTipText("Adicionar");
 		btnAdicionar.setIcon(new ImageIcon(Cursos.class.getResource("/br/com/infox/icons/file (1).png")));
 		btnAdicionar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -137,6 +138,7 @@ public class Cursos extends JFrame {
 		contentPane.add(btnAdicionar);
 		
 		btnPesquisar = new JButton("");
+		btnPesquisar.setToolTipText("Pesquisar");
 		btnPesquisar.setIcon(new ImageIcon(Cursos.class.getResource("/br/com/infox/icons/file.png")));
 		btnPesquisar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -147,6 +149,7 @@ public class Cursos extends JFrame {
 		contentPane.add(btnPesquisar);
 		
 		btnAtualizar = new JButton("");
+		btnAtualizar.setToolTipText("Atualizar");
 		btnAtualizar.setIcon(new ImageIcon(Cursos.class.getResource("/br/com/infox/icons/refresh.png")));
 		btnAtualizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -156,7 +159,8 @@ public class Cursos extends JFrame {
 		btnAtualizar.setBounds(395, 375, 128, 128);
 		contentPane.add(btnAtualizar);
 		
-		btnDeletar = new JButton("Deletar");
+		btnDeletar = new JButton("");
+		btnDeletar.setToolTipText("Deletar");
 		btnDeletar.setIcon(new ImageIcon(Cursos.class.getResource("/br/com/infox/icons/file (5).png")));
 		btnDeletar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -170,6 +174,18 @@ public class Cursos extends JFrame {
 		label.setIcon(new ImageIcon(Cursos.class.getResource("/br/com/infox/icons/icone.png")));
 		label.setBounds(19, -24, 200, 200);
 		contentPane.add(label);
+		
+		JButton btnCadastroAulas = new JButton("");
+		btnCadastroAulas.setToolTipText("Adicionar Aula");
+		btnCadastroAulas.setIcon(new ImageIcon(Cursos.class.getResource("/br/com/infox/icons/criar.png")));
+		btnCadastroAulas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Aulas aula = new Aulas();
+				aula.setVisible(true);
+			}
+		});
+		btnCadastroAulas.setBounds(601, 32, 93, 86);
+		contentPane.add(btnCadastroAulas);
 	}
 	
 	
@@ -199,7 +215,7 @@ public class Cursos extends JFrame {
 			pst.setString(4, txtNota.getText());
 			
 			
-			
+
 			int r = pst.executeUpdate();
 			if (r > 0) {
 				JOptionPane.showMessageDialog(null, "Curso Adicionado com Sucessso!");
@@ -232,13 +248,8 @@ public class Cursos extends JFrame {
 				txtNota.setText(rs.getString(4));
 				
 				
-				
-				
-				
-				
-				
 			} else {
-				JOptionPane.showMessageDialog(null, "Contato Inexistente");	
+				JOptionPane.showMessageDialog(null, "Curso Inexistente");	
 				limpar();
 			}
 		} catch (Exception e) {
@@ -302,5 +313,5 @@ public class Cursos extends JFrame {
 	
 	
 	
-}
+	}
 }

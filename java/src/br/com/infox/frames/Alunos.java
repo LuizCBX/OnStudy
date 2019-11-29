@@ -127,6 +127,7 @@ public class Alunos extends JFrame {
 		Pesquisar.add(btnCreate);
 		
 		JButton btnAlterar = new JButton("");
+		btnAlterar.setToolTipText("Atualizar");
 		btnAlterar.setBackground(Color.WHITE);
 		btnAlterar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -356,6 +357,7 @@ public class Alunos extends JFrame {
 		txtEmail.setColumns(10);
 		
 		JButton btnPesquisar = new JButton("New button");
+		btnPesquisar.setToolTipText("Pesquisar");
 		btnPesquisar.setBackground(Color.WHITE);
 		btnPesquisar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
