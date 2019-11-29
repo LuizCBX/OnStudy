@@ -1,0 +1,402 @@
+
+
+
+/** FONTS */
+
+@import url('https://fonts.googleapis.com/css?family=Passion+One&display=swap');
+
+
+/*TEXTO CARDS*/
+.h1_{
+    color: #DC9A00;
+    text-align: center;
+    text-decoration: none;
+    margin-top: -100px;
+
+  }
+
+  .p_{
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16pt;
+  }
+
+
+  /*****BACK**********/
+  .back{
+
+    background-color: #363636;
+    margin-top: -109px;
+    margin-left: -48px;  
+    margin-right: -48px;
+    font-size: 50px;
+    text-align: center;
+    color: #DC9A00;
+  }
+  .back:hover{
+    background-color: #555555;
+    transition-delay: 0.1s;
+  }
+
+  .prova_r{
+    margin-left: 30%;
+    color: red;
+    font-size: 3.0em;
+  }
+
+  .prova_a{
+    color: green;
+    font-size: 3.0em;
+    margin-left: 30%;
+  }
+
+  .nota{
+    color: #000000;
+    font-size: 2.5em;
+    margin-left: 30%;
+  }
+
+
+
+
+  /**************WELCOME**************/
+  .imgHome {
+    text-align: center;
+    margin-top: -20px;
+  }
+  .imgHome p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .titulo{
+    margin-top: 80px;
+    text-align: center;
+    color: black;
+    font-size: 5em;
+    font-family: 'Passion One', cursive;
+  }
+
+  .st {
+    text-align: center;
+    color: black;
+    font-size: 5em;
+    font-family: 'Passion One', cursive;
+  }
+
+  .logo{
+    text-align: center;
+  }
+/**********SLIDES********/
+
+h1 {
+  color: #DC9A00;
+  text-align: center;
+  font-weight: 300;
+}
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 300px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+  
+
+
+/*******************DUVIDAS*******************/
+#contato{
+  padding-top: 10px;; 
+  width: 70%;
+  margin: 0 auto;
+}
+
+.Destaque h3, h1{
+  text-align: center;
+}
+
+#contato h1{
+  margin-bottom: 50px;
+}
+
+#contato input[type=text]{
+  width: 100%;
+  border: solid 1px #DC9A00;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px; /*Arredondar os cantos*/
+}
+
+#contato textarea{
+  width: 100%;
+  border: 1px solid #DC9A00;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  resize: none;
+  padding: 10px 10px 40px 10px;
+}
+
+#contato input[type=submit]{
+  background-color: #DC9A00 ;
+  border: 1px solid #000000;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 25px 10px 25px;
+  margin-bottom: 20px;
+  
+}
+
+#contato input[type=submit]:hover{
+  background-color: #242c28;
+}
+
+.Destaque{
+  padding-top: 20px;
+  max-width: 1000px; /*espaçamento intn-erno*/
+  margin: 0 auto; /*centralizar*/
+}
+
+
+/*CALENDARIO*/
+
+.calendar{
+  margin-top: 75px;
+  text-align: center;
+}
+
+
+
+/*****************************************************/
+/*************** Tratamento Responsivo ***************/
+/*****************************************************/
+
+/**** tornar todas as imagens responsivas ****/ 
+img {
+  max-width: 100%;
+}
+
+/* o bloco abaixo modifica o comportamento do CSS para telas
+com tamanho de até 480px */
+@media screen and (max-width: 480px){
+
+  .card{
+    float: none;
+    width: 100%;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+
+  }
+  .back{
+    background-color: #363636;
+    margin-top: -109px;
+    margin-left: -48px;  
+    margin-right: -48px;
+    font-size: 40px;
+    text-align: center;
+    color: #DC9A00;
+  }
+
+  .h1_{
+    color: #DC9A00;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: -25px;
+
+  }
+
+  .p_{
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .video{
+    width: 285px;
+    height: 200px;
+  }
+
+  
+  #Destaque h1, h3{
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+
+
+  .imgHome {
+    width: 165px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .imgHome p {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .titulo {
+    margin-top: 80px;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-family: 'Passion One', cursive;
+  }
+
+  .st {
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-family: 'Passion One', cursive;
+  }
+
+  .logo{
+    text-align: center;
+  }
+
+  /**********SLIDES********/
+
+h1 {
+  color: #DC9A00;
+  text-align: center;
+  font-weight: 300;
+}
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  height: 220px;
+  background: #ccc;
+  text-align: center;
+  line-height: 140px;
+}
+
+#slider ul li img{
+  max-width: 100%;
+  margin-top: 25px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+}
