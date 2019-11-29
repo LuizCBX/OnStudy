@@ -60,8 +60,8 @@ CREATE TABLE tb_aula(
 	id int auto_increment PRIMARY KEY,
 	nome varchar(50) not null,
     descricao text,
-    url_pdf varchar(200) DEFAULT NULL,
-    url_video varchar(250) DEFAULT NULL,    
+    url_pdf varchar(500) DEFAULT NULL,
+    url_video varchar(500) DEFAULT NULL,    
 	id_curso int not null,
 	constraint fk_curso_pk_aula foreign key (id_curso) references tb_curso(id)
 )engine InnoDB;
