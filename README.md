@@ -29,7 +29,7 @@
 
 
 ## Modelo Entidade e Relacionamento <h2> 
-![Alt text](integrador/imagens/structure.PNG?raw=true "Title")
+![Alt text](BackEnd_PHP/imagens/structure.PNG?raw=true "Title")
 
 
 ## Contribuindo <h2>
