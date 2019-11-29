@@ -13,8 +13,22 @@ $tituloCurso = $alunos->getCurso($_GET['id_curso']);
 p{
     text-align: justify;
     font-size: 1.5em;
-    
 }
+    /* o bloco abaixo modifica o comportamento do CSS para telas
+com tamanho de até 480px */
+@media screen and (max-width: 480px){
+    .conteudo_curso{
+        display:none;
+        text-align: center;
+    }
+
+    p{
+        text-align: justify;
+        font-size: 15px;
+    }
+}
+    
+
 
 </style>
 
@@ -63,13 +77,13 @@ p{
         ."</button></li>";
 
         echo "<div class='conteudo_curso' id=aula".$linha['id'].">";
-        echo $linha['descricao']."<br><hr> ";
+        echo "<br><hr><b><p>Descrição</b><br>".$linha['descricao']."</p><br><hr> ";
 
         
-        echo $linha['url_video']."<br><hr>";
+        echo "<p><b>Vídeo Aula</b><br></p>".$linha['url_video']."<br><hr>";
         
 
-        echo $linha['url_pdf'];
+        echo "<p><b>Web Aula</b><br></p>".$linha['url_pdf']."<br><hr>";
 
 
         echo "</div>";

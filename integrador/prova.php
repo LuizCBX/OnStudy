@@ -2,7 +2,15 @@
 $tituloCurso = $alunos->getCurso($_GET['id_curso']);
 $questoesAlternativas = $alunos->getQuestoes($_GET['id_curso']);
 ?>
-
+<style>
+#borda {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+</style>
 
 <div class="back">
 
@@ -17,19 +25,55 @@ $questoesAlternativas = $alunos->getQuestoes($_GET['id_curso']);
 
     <form action="corrigir.php" method="POST">
         <?php
+
             $questao = 1;
             echo "<ol>";
             while($linha = mysqli_fetch_assoc($questoesAlternativas)){
-                echo "<li> ) ";
+                echo "<br><li> ) ";
                 echo $linha['descricao'];
                 echo "</li>";
-                echo "a. <input type=radio name=questao".$questao." value='a'> ".$linha['alternativa_a']."<br>";
-                echo "b. <input type=radio name=questao".$questao." value='b'> ".$linha['alternativa_b']."<br>";
-                echo "c. <input type=radio name=questao".$questao." value='c'> ".$linha['alternativa_c']."<br>";
-                echo "d. <input type=radio name=questao".$questao." value='d'> ".$linha['alternativa_d']."<br>";
-                echo "e. <input type=radio name=questao".$questao." value='e'> ".$linha['alternativa_e']."<br>";
+
+                // echo 
+                echo "<div class=\"custom-control custom-radio\">";
+                echo "<input type=radio name=questao".$questao." id=customRadioa".$questao." value='a' class=\"custom-control-input\"> ";
+                echo "<label class=\"custom-control-label\" for=customRadioa".$questao.">a)  ".$linha['alternativa_a']."</label><br>";
+                echo "</div>";
+                
+                
+                echo "<div class=\"custom-control custom-radio\">";
+                echo "<input type=radio name=questao".$questao." id=customRadiob".$questao." value='b' class=\"custom-control-input\"> ";
+                echo "<label class=\"custom-control-label\" for=customRadiob".$questao.">b)  ".$linha['alternativa_b']."</label><br>";
+                echo "</div>";
+                
+                
+                echo "<div class=\"custom-control custom-radio\">";
+                echo "<input type=radio name=questao".$questao." id=customRadioc".$questao." value='c' required class=\"custom-control-input\"> ";
+                echo "<label class=\"custom-control-label\" for=customRadioc".$questao.">c)  ".$linha['alternativa_c']."</label><br>";
+                echo "</div>";
+                
+                
+                echo "<div class=\"custom-control custom-radio\">";
+                echo "<input type=radio name=questao".$questao." id=customRadiod".$questao." value='d' class=\"custom-control-input\"> ";
+                echo "<label class=\"custom-control-label\" for=customRadiod".$questao.">d)  ".$linha['alternativa_d']."</label><br>";
+                echo "</div>";
+                
+                
+                echo "<div class=\"custom-control custom-radio\">";
+                echo "<input type=radio name=questao".$questao." id=customRadioe".$questao." value='e' class=\"custom-control-input\"> ";
+                echo "<label class=\"custom-control-label\" for=customRadioe".$questao.">e)  ".$linha['alternativa_e']."</label><br>";
+                echo "</div>";
+                                
+                
                 echo "<input type=hidden name=alternativa_correta".$questao." value=".$linha['alternativa_correta']."><br>";
+                
+                
+                
+                
                 echo "<hr>";
+                
+                
+                
+                
                 echo "<input type=hidden name=id_curso value=".$linha['id_curso']."><br>";
 
 
@@ -38,6 +82,8 @@ $questoesAlternativas = $alunos->getQuestoes($_GET['id_curso']);
             }
             echo "</ol>";
 
+           
+
                 
         ?>  
         <div class='col-12 text-center mt-5'>
@@ -45,17 +91,6 @@ $questoesAlternativas = $alunos->getQuestoes($_GET['id_curso']);
         </div>
                    
     </form>
-
-    <!-- <script src="jquery-2.1.4.min.js"></script>
-    <script src="jquery.validate.min.js"></script>
-    <script>
-            $(function(){
-                $("#enviar").validate();
-            });
-    </script> -->
-
-
-
 
 
     <script>

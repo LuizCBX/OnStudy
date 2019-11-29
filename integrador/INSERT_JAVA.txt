@@ -1,0 +1,101 @@
+INSERIR EM CURSOS>AULA
+
+-----------------
+DESCRICAO 1: JavaScript é uma linguagem de programação front-end, isto é, uma linguagem que interpretada diretamente no cliente (navegador). Nos últimos anos, JavaScript vem se destacando como a linguagem preferida entre todos os programadores web, por isso é tão importante estudá-la.
+       Neste curso, você aprenderá os conceitos básicos da linguagem JavaScript.
+
+VIDEO 1: <iframe class="video" width="650" height="315" src="https://www.youtube.com/embed/h1FiBei6plo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+PDF: <iframe class="video"src="http://conteudo.icmc.usp.br/CMS/Arquivos/arquivos_enviados/BIBLIOTECA_113_ND_72.pdf" width="650" height="670" style="border: none;"></iframe>
+
+------------------
+
+QUESTÃO 1 
+
+DESCRIÇÃO: Um algoritmo é;
+LETRA A: uma sequência finita de ações executáveis
+LETRA B: uma abstração visual de um problema computacional
+LETRA C: um mapeamento de sistemas nãomensuráveis.
+LETRA D: uma herança lógica de um problema real, traduzido para linguagem demáquina.
+LETRA E: prever mudanças mais que estimar um prazo.
+CORRETA: A
+--
+QUESTAO 2
+
+DESCRIÇÃO: Um algoritmo é;
+LETRA A: uma sequência finita de ações executáveis
+LETRA B: uma abstração visual de um problema computacional
+LETRA C: um mapeamento de sistemas nãomensuráveis.
+LETRA D: uma herança lógica de um problema real, traduzido para linguagem demáquina.
+LETRA E: prever mudanças mais que estimar um prazo.
+CORRETA: A
+--
+QUESTÃO 3
+
+DESCRIÇÃO: Um algoritmo é;
+LETRA A: uma sequência finita de ações executáveis
+LETRA B: uma abstração visual de um problema computacional
+LETRA C: um mapeamento de sistemas nãomensuráveis.
+LETRA D: uma herança lógica de um problema real, traduzido para linguagem demáquina.
+LETRA E: prever mudanças mais que estimar um prazo.
+CORRETA: A
+--
+QUESTÃO 4
+
+DESCRIÇÃO: Um algoritmo é;
+LETRA A: uma sequência finita de ações executáveis
+LETRA B: uma abstração visual de um problema computacional
+LETRA C: um mapeamento de sistemas nãomensuráveis.
+LETRA D: uma herança lógica de um problema real, traduzido para linguagem demáquina.
+LETRA E: prever mudanças mais que estimar um prazo.
+CORRETA: A
+--
+QUESTÃO 5
+
+DESCRIÇÃO: Um algoritmo é;
+LETRA A: uma sequência finita de ações executáveis
+LETRA B: uma abstração visual de um problema computacional
+LETRA C: um mapeamento de sistemas nãomensuráveis.
+LETRA D: uma herança lógica de um problema real, traduzido para linguagem demáquina.
+LETRA E: prever mudanças mais que estimar um prazo.
+CORRETA: A
+--
+QUESTÃO 6
+
+DESCRIÇÃO: Um algoritmo é;
+LETRA A: uma sequência finita de ações executáveis
+LETRA B: uma abstração visual de um problema computacional
+LETRA C: um mapeamento de sistemas nãomensuráveis.
+LETRA D: uma herança lógica de um problema real, traduzido para linguagem demáquina.
+LETRA E: prever mudanças mais que estimar um prazo.
+CORRETA: A
+--
+QUESTÃO 7
+
+DESCRIÇÃO: Um algoritmo é;
+LETRA A: uma sequência finita de ações executáveis
+LETRA B: uma abstração visual de um problema computacional
+LETRA C: um mapeamento de sistemas nãomensuráveis.
+LETRA D: uma herança lógica de um problema real, traduzido para linguagem demáquina.
+LETRA E: prever mudanças mais que estimar um prazo.
+CORRETA: A
+--
+QUESTAO 8
+
+DESCRIÇÃO: Um algoritmo é;
+LETRA A: uma sequência finita de ações executáveis
+LETRA B: uma abstração visual de um problema computacional
+LETRA C: um mapeamento de sistemas nãomensuráveis.
+LETRA D: uma herança lógica de um problema real, traduzido para linguagem demáquina.
+LETRA E: prever mudanças mais que estimar um prazo.
+CORRETA: A
+--
+QUESTAO 9
+
+DESCRIÇÃO: Um algoritmo é;
+LETRA A: uma sequência finita de ações executáveis
+LETRA B: uma abstração visual de um problema computacional
+LETRA C: um mapeamento de sistemas nãomensuráveis.
+LETRA D: uma herança lógica de um problema real, traduzido para linguagem demáquina.
+LETRA E: prever mudanças mais que estimar um prazo.
+CORRETA: A

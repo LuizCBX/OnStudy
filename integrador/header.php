@@ -18,7 +18,7 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
-    <title>Home - OnStudy</title>
+    <title>OnStudy</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -29,6 +29,7 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/design.css">
     <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 
     <link rel="shortcut icon" type="image/png" href="imagens/icon.png" />
 </head>
@@ -69,34 +70,20 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
                                 <i class="fa fa-tachometer-alt"></i>
                                 <span class="menu-text">Página inicial</span>
                             </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="#">Dashboard 1
-                                            <span class="badge badge-pill badge-success">Pro</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            
                         </li>
 
                         <li class="sidebar-dropdown">
-                            <a href="calendario.php">
-                                <i class="fa fa-calendar"></i>
-                                <span class="menu-text">Calendário do aluno</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-dropdown">
-                            <a href="nota.php">
-                                <i class="fa fa-chart-line"></i>
-                                <span class="menu-text">Notas</span>
-                            </a>
- 
-                        </li>
-                        <li class="sidebar-dropdown">
                             <a href="cursos.php">
-                                <i class="fa fa-globe"></i>
+                                <i class="fas fa-graduation-cap"></i>
                                 <span class="menu-text">Cursos</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-dropdown">
+                            <a href="duvidas.php">
+                                <i class="fas fa-question"></i>
+                                <span class="menu-text">Dúvidas</span>
                             </a>
                         </li>
                     </ul>
@@ -166,6 +153,10 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
                         <span class="badge-sonar"></span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuMessage">
+                        <div class="messages-header">
+                            <i class="fa fa-cog"></i>
+                            Configurações
+                        </div>
       
                     </div>
                 </div>
@@ -192,14 +183,14 @@ $aluno = $alunos->getAlunoByRA($_SESSION['ra']);
 
                     <div class="form-group col-md-12">
 
-                        <a id="toggle-sidebar" style="margin-top: -80px; margin-left: -30px;" class="btn btn-secondary rounded-0" 
+                        <a id="toggle-sidebar" style="margin-top: -95px; margin-left: -30px;" class="btn btn-secondary rounded-0" 
                         href="#">
                             <span class="fas fa-arrows-alt-h"></span>
                         </a>
 
-                        <!--<a id="pin-sidebar" style="margin-top: -80px; margin-left: -20px;" class="btn btn-outline-secondary rounded-0" href="#">
-                            <span class="fas fa-arrows-alt-h"></span>
-                        </a>-->
+                        <!-- <a id="pin-sidebar" style="margin-top: -50px; margin-left: -30px;" class="btn btn-outline-secondary rounded-0" href="#">
+                            <span class="fas fa-chevron-circle-left"></span>
+                        </a> -->
 
                     </div>
                 </div>
